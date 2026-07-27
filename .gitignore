@@ -45,3 +45,6 @@ screenshot-*.png
 
 # Superpowers
 .superpowers/
+
+# Codex
+.codex/
