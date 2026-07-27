@@ -1,0 +1,91 @@
+model_provider = "custom"
+model = "deepseek-v4-flash"
+model_reasoning_effort = "high"
+disable_response_storage = true
+notify = [ "C:\\Users\\xenov\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\03b1cdac8af3a530\\bin\\node_modules\\@oai\\sky\\bin\\windows\\codex-computer-use.exe", "turn-ended" ]
+model_catalog_json = "cc-switch-model-catalog.json"
+
+[model_providers]
+[model_providers.custom]
+name = "deepseek"
+base_url = "http://127.0.0.1:15721/v1"
+wire_api = "responses"
+requires_openai_auth = true
+
+[marketplaces]
+[marketplaces.openai-bundled]
+last_updated = "2026-07-15T01:04:54Z"
+source_type = "local"
+source = "\\\\?\\C:\\Users\\xenov\\.codex\\.tmp\\bundled-marketplaces\\openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-07-13T12:08:33Z"
+source_type = "local"
+source = "\\\\?\\C:\\Users\\xenov\\.cache\\codex-runtimes\\codex-primary-runtime\\plugins\\openai-primary-runtime"
+
+[plugins]
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."google-calendar@openai-curated"]
+enabled = true
+
+[plugins."slack@openai-curated"]
+enabled = true
+
+[features]
+js_repl = false
+
+[mcp_servers]
+[mcp_servers.node_repl]
+args = []
+command = "C:\\Users\\xenov\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\03b1cdac8af3a530\\bin\\node_repl.exe"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "C:\\Users\\xenov\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\03b1cdac8af3a530\\bin\\node_modules"
+NODE_REPL_NODE_PATH = "C:\\Users\\xenov\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\03b1cdac8af3a530\\bin\\node.exe"
+NODE_REPL_TRUSTED_CODE_PATHS = "C:\\Users\\xenov\\.codex"
+CODEX_HOME = "C:\\Users\\xenov\\.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "7ed52dae165c3bc22b6d24f282e2c1fbc87f6949fbbe037767a7418d8f517f01,e2cad16d8d9f60f09c9f0951ec7dfdd9e8f59dedd06045c0b6827dc8fa8322f0"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.707.62119"
+SKY_CUA_NATIVE_PIPE = "1"
+SKY_CUA_NATIVE_PIPE_DIRECTORY = "\\\\.\\pipe\\codex-computer-use-7c217ed0-d6c5-4873-9a2d-bd1cca88b9f5"
+CODEX_CLI_PATH = "C:\\Users\\xenov\\AppData\\Local\\OpenAI\\Codex\\bin\\3135b80b111fd431\\codex.exe"
+
+[desktop]
+conversationDetailMode = "STEPS_PROSE"
+sansFontSize = 14
+codeFontSize = 13
+ambient-suggestions-enabled = true
+followUpQueueMode = "queue"
+
+[windows]
+sandbox = "elevated"
+
+[projects]
+[projects."c:\\mumdir"]
+trust_level = "trusted"

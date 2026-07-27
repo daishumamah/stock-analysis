@@ -1,0 +1,47 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Data cache
+data/cache/
+data/.alpha_key
+
+# Streamlit secrets (not committed, set via Cloud UI)
+.streamlit/secrets.toml
+
+# Node.js
+node_modules/
+package.json
+package-lock.json
+
+# Env
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp test files
+test_quick.py
+test_verify.py
+test_rt.py
+test_sina.py
+test_verify_algo.py
+screenshot.mjs
+screenshot.cjs
+
+# Generated diagrams
+diagram-*.png
+screenshot-*.png
+
+# Superpowers
+.superpowers/
