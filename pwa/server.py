@@ -1,9 +1,9 @@
-﻿import http.server, socketserver, urllib.request, urllib.error, os, socket, sys, json
+import http.server, socketserver, urllib.request, urllib.error, os, socket, sys, json
 
-STREAMLIT_URL = "http://localhost:8501"
+STREAMLIT_URL = "https://stock-analysis.streamlit.app"
 PROJ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PWA_DIR = os.path.join(PROJ, "pwa")
-PORT = 8099
+PORT = 8080
 
 def get_ip():
     try:
@@ -57,10 +57,10 @@ class PWAHandler(http.server.SimpleHTTPRequestHandler):
 
 ip = get_ip()
 print("=== Stock Analysis PWA ===")
-print("Streamlit: http://localhost:8501")
+print("Streamlit: " + STREAMLIT_URL)
 print("PWA: http://" + ip + ":" + str(PORT))
 print()
-print("On your phone (same WiFi):")
+print("On your phone:")
 print("  Open http://" + ip + ":" + str(PORT))
 print("  iOS: Share > Add to Home Screen")
 print("  Android: Menu > Add to Home Screen")

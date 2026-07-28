@@ -1,8 +1,8 @@
-﻿{
+{
   "name": "Stock Analysis Tool",
   "short_name": "STK",
   "description": "Stock and crypto analysis with technical indicators, signal scoring, and risk metrics",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#1a1a2e",
   "theme_color": "#1a1a2e",

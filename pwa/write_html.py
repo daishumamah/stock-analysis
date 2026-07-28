@@ -1,8 +1,7 @@
-ï»¿import os, sys
+import os, sys
 PROJ = os.path.dirname(os.path.abspath(__file__))
 
-STREAMLIT_PORT = 8501
-PWA_PORT = 8080
+STREAMLIT_URL = "https://stock-analysis.streamlit.app"
 
 HTML = """<!DOCTYPE html>
 <html lang="en">
@@ -24,7 +23,7 @@ iframe { width:100%; height:100%; border:none; }
 </style>
 </head>
 <body>
-<iframe src="http://localhost:STREAMLIT_PORT" allow="camera;microphone;geolocation"></iframe>
+<iframe src="STREAMLIT_URL" allow="camera;microphone;geolocation"></iframe>
 <script>
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js");
@@ -33,9 +32,9 @@ if ("serviceWorker" in navigator) {
 </body>
 </html>"""
 
-HTML = HTML.replace("STREAMLIT_PORT", str(STREAMLIT_PORT))
+HTML = HTML.replace("STREAMLIT_URL", STREAMLIT_URL)
 
 # Write index.html
 with open(os.path.join(PROJ, "pwa", "index.html"), "w", encoding="utf-8") as f:
     f.write(HTML)
-print("index.html written")
+print("index.html written — target: " + STREAMLIT_URL)
