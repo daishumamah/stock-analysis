@@ -1,7 +1,7 @@
 import os, sys
 PROJ = os.path.dirname(os.path.abspath(__file__))
 
-STREAMLIT_URL = "https://stock-analysis.streamlit.app"
+STREAMLIT_URL = "https://stock-analysis-fahfsh6d7rwaivwhr7qyaf.streamlit.app"
 
 HTML = """<!DOCTYPE html>
 <html lang="en">

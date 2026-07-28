@@ -1,6 +1,6 @@
 import http.server, socketserver, urllib.request, urllib.error, os, socket, sys, json
 
-STREAMLIT_URL = "https://stock-analysis.streamlit.app"
+STREAMLIT_URL = "https://stock-analysis-fahfsh6d7rwaivwhr7qyaf.streamlit.app"
 PROJ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PWA_DIR = os.path.join(PROJ, "pwa")
 PORT = 8080

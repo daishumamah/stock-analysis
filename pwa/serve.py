@@ -5,5 +5,5 @@ os.chdir(DIR)
 Handler = http.server.SimpleHTTPRequestHandler
 with socketserver.TCPServer(("0.0.0.0", PORT), Handler) as httpd:
     print("PWA server at http://0.0.0.0:" + str(PORT) + " (serving to phone on same WiFi)")
-    print("Streamlit app at https://stock-analysis.streamlit.app")
+    print("Streamlit app at https://stock-analysis-fahfsh6d7rwaivwhr7qyaf.streamlit.app")
     httpd.serve_forever()
