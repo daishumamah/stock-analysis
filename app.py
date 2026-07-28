@@ -3,9 +3,10 @@ PROJ = os.path.dirname(os.path.abspath(__file__))
 if PROJ not in sys.path: sys.path.insert(0, PROJ)
 
 import streamlit as st
-from pwa_pack import generate_pwa_head
-st.set_page_config(page_title="股票分析工具 _ Stock Analysis Tool", layout="wide",
-    additional_head_html=generate_pwa_head())
+from pwa_pack import PWA_SCRIPT
+st.set_page_config(page_title="股票分析工具 _ Stock Analysis Tool", layout="wide")
+
+st.markdown(PWA_SCRIPT, unsafe_allow_html=True)
 
 from data.fetcher import get_historical_data, validate_ticker
 from data.realtime import get_realtime_price
